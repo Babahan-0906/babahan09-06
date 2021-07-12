@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icons/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="register.css">
+
+    <title>Baş sahypa</title>
+</head>
+<body>
+    <div id="section">
+        <div id="header">
+            <ul>
+                <li><a href="home.html" title="Home">Baş sahypa</a></li>
+                <li><a href="#" title="New furnitures">Soňky oňarylan mebeller</a></li>
+                <li><a href="#" title="Shopping">Taýýar mebeller</a></li>
+                <li><a href="employees.html" title="Employees">Işçiler</a></li>
+            </ul>
+            <ul>
+                <li><input type="search" title="Search" placeholder="Gözle..." id="search"></li>
+                <li><a href="register.html" title="Register">Agza bol</a></li>
+                <li><a href="login.html" title="Login">Içerik gir</a></li>
+            </ul>
+        </div>
+        
+        <div id="main">
+            <div id="wrapper">
+                <div id="signup_form">
+                    <h2>Agza bol</h2>
+                    <div id="form-group">
+                        <label for="first_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" name="first_name" placeholder="Ady">
+                    </div>
+
+                    <div id="form-group">
+                        <label for="last_name"><i class="zmdi zmdi-account-circle"></i></label>
+                        <input type="text" name="last_name" placeholder="Familiýasy">
+                    </div>
+
+                    <div id="form-group">
+                        <label for="username"><i class="zmdi zmdi-account-o"></i></label>
+                        <input type="text" name="username" placeholder="Ulanyjy Ady">
+                    </div>
+
+                    <div id="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" name="pass" id="pass" placeholder="Ulanyjy Paroly">
+                    </div>
+
+                    <div id="form-group">
+                        <label for="profile"><i class="zmdi zmdi-photo-size-select-large"></i></label>
+                        <input type="file" name="profile" id="profile" style="color: #999;">
+                    </div>
+
+                    <button>Agza bol</button>
+                </div>
+                <div id="signup_image">
+                    <img src="images/signup-image.jpg" alt="Agza-bol-surat">
+                    <a href="login.html">Men eýýäm agza boldum</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+
+    <script src="jquery-3.4.0.js"></script>
+    <script>
+        var width = document.getElementById('pass').clientWidth
+        $('#profile').css('width', width);
+    </script>
+</body>
+</html>

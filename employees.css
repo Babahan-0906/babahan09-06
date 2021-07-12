@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+    background: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#section {
+    display: grid;
+    max-width: 2000;
+    margin: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, minmax(100px, auto));
+    grid-gap: 10px;
+    /* background: #009999; */
+}
+
+#section #header, #footer {
+    /* background: rgb(63, 63, 70); */
+    background: white;
+}
+
+
+#header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 9; 
+    display: flex;
+    /* border-bottom: 1px solid grey; */
+    box-shadow: 0 2px 2px 0px gray;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /* background: white; nime uchin ishlegenyok*/
+}
+
+#header ul {
+    /* line-height: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#header ul li {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(39, 39, 39, 0.678);
+}
+
+#header ul li a {
+    color: rgba(39, 39, 39, 0.678);
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    /* line-height: 50px; */
+}
+
+#header a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#search {
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+    outline: none;
+    border: 2px solid #6dabe4;
+    border-radius: 25px;
+}
+
+
+#main {
+    grid-row: 2 / 10;
+    grid-column: 1 / 9;
+    box-shadow: 0 2px 2px 0px gray;
+}
+
+#main #wrapper {
+    display: flex;
+    padding: 10px;
+    /* background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+    color: rgba(39, 39, 39, 0.678);
+    flex-direction: column;
+}
+
+#employee {
+    display: flex;
+    margin: 5px;
+    border-radius: 30px;
+    /* box-shadow: 0 4px 2px -2px gray; */
+}
+
+#employee span {
+    margin-top: 20px;
+}
+
+#employee img {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#footer {
+    grid-row: 10 / 11;
+    grid-column: 1 / 9;
+    box-shadow: 0 2px 2px 0px gray;
+}
+
+@media screen and (max-width: 700px)
+{
+    #employee {
+        flex-direction: column;
+    }
+
+    #employee img {
+        border-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
