@@ -149,28 +149,12 @@ i {
     height: auto;
 }
 
-#signin_image a {
-    text-decoration: none;
-    color: #6dabe4;
-    font-size: 17px;
-    margin-top: 10px;
-}
-
 #footer {
     grid-row: 7 / 9;
     grid-column: 1 / 9;
     box-shadow: 0 2px 2px 0px gray;
 }
 
-
-.data {
-    display: none;
-}
-
 .g-signin2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
+    margin-top: 10px;
 }
