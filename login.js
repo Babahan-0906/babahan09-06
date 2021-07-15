@@ -1,13 +1,12 @@
 function onSignIn(googleUser) {
 
     var profile = googleUser.getBasicProfile();
-    $("#username").text(profile.getName());
-    $("#email").text(profile.getEmail());
+    $("#username").attr('value', profile.getName());
+    $("#email").attr('value', profile.getEmail());
     $("#image").attr('src', profile.getImageUrl());
     $("#user_photo").show();
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
-
 }
 
 function signOut() {
