@@ -5,7 +5,8 @@ function onSignIn(googleUser) {
     $("#email").attr('value', profile.getEmail());
     $("#image").attr('src', profile.getImageUrl());
     $("#user_photo").css('display', 'block');
-    $(".data").css("display", "block");
+    $(".sign_out").css("display", "block");
+    $(".sign_in").css("display", "block");
     $(".g-signin2").css("display", "none");
 }
 
@@ -16,7 +17,8 @@ function signOut() {
         $("#user_photo").css("display", "none");
         $(".g-signin2").css("display", "block");
         $("#username").attr('value', "");
-        $(".data").css("display", "none");
+        $(".sign_out").css("display", "none");
+        $(".sign_in").css("display", "none");
         $("#email").attr('value', "");
     });
 }
