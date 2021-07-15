@@ -123,7 +123,7 @@ i {
     letter-spacing: 0.5px;
 }
 
-#signin_form button {
+#sign_button button {
     background: #6dabe4;
     color: #fff;
     border: none;
@@ -143,6 +143,11 @@ i {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sign_button {
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -168,4 +173,11 @@ i {
     grid-row: 7 / 9;
     grid-column: 1 / 9;
     box-shadow: 0 2px 2px 0px gray;
+}
+
+@media screen and (max-width: 403px)
+{
+    #sign_button button {
+        width: 100%;
+    }
 }
