@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background: white;
-    font-size: 20px;
+    font-size: 1em;
     font-family: sans-serif;
 }
 
@@ -22,6 +22,7 @@ body {
 
 i {
     position: absolute;
+    margin-top: 5px;
 }
 
 #header {
@@ -138,6 +139,13 @@ i {
     background: #4a96dd;
 }
 
+#user_photo {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 #signin_image {
     display: flex;
     /* width: 50%; */
@@ -149,12 +157,15 @@ i {
     height: auto;
 }
 
+#signin_image a {
+    text-decoration: none;
+    color: #6dabe4;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
 #footer {
     grid-row: 7 / 9;
     grid-column: 1 / 9;
     box-shadow: 0 2px 2px 0px gray;
-}
-
-.g-signin2 {
-    margin-top: 10px;
 }
