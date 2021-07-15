@@ -4,7 +4,7 @@ function onSignIn(googleUser) {
     $("#username").attr('value', profile.getName());
     $("#email").attr('value', profile.getEmail());
     $("#image").attr('src', profile.getImageUrl());
-    $("#user_photo").show();
+    $("#user_photo").css('display', 'block');
     $(".data").css("display", "block");
     $(".g-signin2").css("display", "none");
 }
