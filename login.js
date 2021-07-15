@@ -16,6 +16,7 @@ function signOut() {
         $("#user_photo").css("display", "none");
         $(".g-signin2").css("display", "block");
         $("#username").attr('value', "");
+        $(".data").css("display", "none");
         $("#email").attr('value', "");
     });
 }
