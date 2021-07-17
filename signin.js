@@ -4,4 +4,3 @@ function onSignIn(googleUser) {
     $("#login").text(profile.getName());
     alert('lol');
 }
-alert('kkkkkk');
