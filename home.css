@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
 }
 
@@ -98,8 +98,11 @@ body {
     /* grid-row: 1 / 2; */
     /* display: flex; */
     /* justify-content: center; */
-    background: #b9b6a79a;
-    box-shadow: 0 4px 2px -2px gray;
+    /* background: #b9b6a79a; */
+    padding: 19px;
+    padding-bottom: 39px;
+    box-shadow: 0 2px 2px -2px gray;
+    /* border-bottom: 1px solid gray; */
 }
 
 #home_sm_haty {
@@ -116,8 +119,11 @@ body {
     /* display: flex;
     flex-direction: row-reverse;
     justify-content: center; */
-    background: #B5B4B9;
-    box-shadow: 0 4px 2px -2px gray;
+    /* background: #B5B4B9; */
+    padding: 19px;
+    padding-bottom: 39px;
+    box-shadow: 0 2px 2px -2px gray;
+    /* border-bottom: 1px solid gray; */
 }
 
 #home_bm {
