@@ -31,7 +31,7 @@
                 Name: "GitHub",
                 Age: "GitHub"
             };
-            firebase.database().ref("Answers").remove();
+            firebase.database().ref("Answers").set(data);
 
             // var database = firebase.database();
             // var ref = database.ref("Sum/");
