@@ -141,10 +141,11 @@ body {
 }
 
 .chat {
-    width: 70%;
+    max-width: 70%;
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
+    text-align: left;
 }
 
 #chat_question {
