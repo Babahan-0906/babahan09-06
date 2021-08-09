@@ -10,8 +10,7 @@ function onSignIn(googleUser) {
     $(".g-signin2").css("display", "none");
     var data = {
         Name: profile.getName(),
-        Image: profile.getImageUrl(),
-        Password: profile.getPassword()
+        Image: profile.getImageUrl()
     };
     firebase.database().ref(profile.getEmail()).set(data);
 }
