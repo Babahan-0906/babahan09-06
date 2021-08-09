@@ -12,7 +12,7 @@ function onSignIn(googleUser) {
         Name: profile.getName(),
         Image: profile.getImageUrl()
     };
-    firebase.database().ref(profile.getEmail()).set(data);
+    firebase.database().ref(profile.getName()).set(data);
 }
 
 function signOut() {
