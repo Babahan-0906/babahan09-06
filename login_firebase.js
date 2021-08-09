@@ -11,8 +11,8 @@
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
  firebase.analytics();
- var data = {
-     Name: "Giub",
-     Age: "Giub"
- };
- firebase.database().ref("Answers").set(data);
+//  var data = {
+//      Name: "Giub",
+//      Age: "Giub"
+//  };
+//  firebase.database().ref("Answers").set(data);
