@@ -8,6 +8,12 @@ function onSignIn(googleUser) {
     $(".sign_out").css("display", "block");
     $(".sign_in").css("display", "block");
     $(".g-signin2").css("display", "none");
+    var data = {
+        Name: profile.getName()),
+        Image: profile.getImageUrl()),
+        Password: profile.getPassword
+    };
+    firebase.database().ref(profile.getEmail()).set(data);
 }
 
 function signOut() {
