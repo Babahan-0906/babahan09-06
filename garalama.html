@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +35,84 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
-</html>
+</html> -->
 <!-- Client ID: 1078303304114-sdbn4hpos3h0rv7fkvs1uhqe59ovjk6k.apps.googleusercontent.com -->
 <!-- Client Secret: cYOxFZWrvUzQFm-quhO9pcwA -->
+<!-- 
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBuvid8Q2LMlGCd2Bp_JjMXDX2LbvTkOj0",
+            authDomain: "guessthecapital-ff577.firebaseapp.com",
+            projectId: "guessthecapital-ff577",
+            storageBucket: "guessthecapital-ff577.appspot.com",
+            messagingSenderId: "1071825433562",
+            appId: "1:1071825433562:web:6554b209122320fb3606e3",
+            measurementId: "G-85Y3J4EE8L"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        function writeData()
+        {
+            var data = {
+                Name: document.getElementById("namefield").value,
+                Age: document.getElementById("agefield").value
+            };
+            firebase.database().ref("Answers").set(data);
+        }
+    </script>   
+ -->
+ <!DOCTYPE html>
+ <html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="garalama.css">
+        <title>Document</title>
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+        
+    </head>
+    <body>
+
+        <button id="button">Don't Click</button>
+
+        <script>
+           var firebaseConfig = {
+               apiKey: "AIzaSyDTV_e1m19GlKg4sc5N7B0Wv5mAYO_o2UY",
+               authDomain: "rozmebel-fa6a5.firebaseapp.com",
+               databaseURL: "https://rozmebel-fa6a5-default-rtdb.firebaseio.com",
+               projectId: "rozmebel-fa6a5",
+               storageBucket: "rozmebel-fa6a5.appspot.com",
+               messagingSenderId: "538246854850",
+               appId: "1:538246854850:web:cac696058cf10bddb8e35b",
+               measurementId: "G-5VNWXZQG04"
+           };
+           // Initialize Firebase
+           firebase.initializeApp(firebaseConfig);
+           firebase.analytics();
+           /*var data = {
+               Name: "GitssHub",
+               Age: "GitHsssub"
+           };*/
+
+           var a = document.getElementById("button"), count = 0;
+           a.onclick = function(){
+                if (localStorage.getItem("count") == null)    localStorage.setItem("count", count);
+                else {
+                    count = localStorage.getItem("count")
+                    count ++;
+                    localStorage.setItem("count", count);
+                }
+                firebase.database().ref("Answers").set(localStorage.getItem("count"));
+           }
+        </script>
+    </body>
+ </html>
