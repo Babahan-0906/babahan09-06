@@ -11,13 +11,18 @@ function onSignIn(googleUser) {
     firebase.database().ref('users/srcnt').once('value', function(snapshot){          
         if (snapshot.val() != null)
         {
-            var data = {
-                Name: profile.getName(),
-                Image: profile.getImageUrl(),
-                Email: profile.getEmail()
-            };
-            firebase.database().ref("users/user" + snapshot.val()).set(data);
-            firebase.database().ref("users/srcnt").set(snapshot.val() + 1);
+            firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshott) {
+                if (snapshott.val() == null)
+                {
+                    var data = {
+                        Name: profile.getName(),
+                        Image: profile.getImageUrl(),
+                        Email: profile.getEmail()
+                    };
+                    firebase.database().ref("users/user" + snapshot.val()).set(data);
+                    firebase.database().ref("users/srcnt").set(snapshot.val() + 1);
+                }
+            });
         }
     })
     
