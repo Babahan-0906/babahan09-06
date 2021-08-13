@@ -14,7 +14,7 @@ firebase.analytics();
 firebase.database().ref('srcnt').once('value', function(snapshot){    
     if (snapshot.val() == null)
     {
-        firebase.database().ref('srcnt').set(1)
+        firebase.database().ref('users/srcnt').set(1)
         // console.log("snapshot.val()")
     }
 })
