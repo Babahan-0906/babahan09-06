@@ -8,11 +8,19 @@ function onSignIn(googleUser) {
     $(".sign_out").css("display", "block");
     $(".sign_in").css("display", "block");
     $(".g-signin2").css("display", "none");
-    var data = {
-        Name: profile.getName(),
-        Image: profile.getImageUrl()
-    };
-    firebase.database().ref(profile.getName()).set(data);
+    firebase.database().ref('srcnt').once('value', function(snapshot){          
+        if (snapshot.val() != null)
+        {
+            var data = {
+                Name: profile.getName(),
+                Image: profile.getImageUrl(),
+                Email: profile.getEmail()
+            };
+            firebase.database().ref("user" + snapshot.val()).set(data);
+            firebase.database().ref("srcnt").set(snapshot.val() + 1);
+        }
+    })
+    
 }
 
 function signOut() {
