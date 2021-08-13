@@ -16,8 +16,8 @@ function onSignIn(googleUser) {
                 Image: profile.getImageUrl(),
                 Email: profile.getEmail()
             };
-            firebase.database().ref("user" + snapshot.val()).set(data);
-            firebase.database().ref("srcnt").set(snapshot.val() + 1);
+            firebase.database().ref("users/user" + snapshot.val()).set(data);
+            firebase.database().ref("users/srcnt").set(snapshot.val() + 1);
         }
     })
     
