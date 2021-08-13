@@ -11,7 +11,7 @@ var firebaseConfig = {
  // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-firebase.database().ref('srcnt').once('value', function(snapshot){    
+firebase.database().ref('users/srcnt').once('value', function(snapshot){    
     if (snapshot.val() == null)
     {
         firebase.database().ref('users/srcnt').set(1)
