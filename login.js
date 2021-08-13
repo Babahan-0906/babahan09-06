@@ -8,7 +8,7 @@ function onSignIn(googleUser) {
     $(".sign_out").css("display", "block");
     $(".sign_in").css("display", "block");
     $(".g-signin2").css("display", "none");
-    firebase.database().ref('srcnt').once('value', function(snapshot){          
+    firebase.database().ref('users/srcnt').once('value', function(snapshot){          
         if (snapshot.val() != null)
         {
             var data = {
