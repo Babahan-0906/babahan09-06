@@ -20,10 +20,10 @@ function onSignIn (googleUser){
             console.log(data.key)
         })
     })
-    firebase.database().ref('users/' + user_num + 'qstncnt').once('value', function(snapshot){          
+    firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshot){          
         if (snapshot.val() == null)
         {
-            firebase.database().ref('users/' + 'user1/' + 'qstncnt').set(0)
+            firebase.database().ref('users/' + user_num + '/qstncnt').set(0)
         }
     })
 }
