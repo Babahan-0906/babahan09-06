@@ -96,6 +96,26 @@ body {
     /* box-shadow: 0 4px 2px -2px gray; */
 }
 
+#employee:nth-child(1) img{
+    background: #FF8528;
+}
+
+#employee:nth-child(2) img{
+    background: #7CE5DE;
+}
+
+#employee:nth-child(3) img{
+    background: #D7EDFF;
+}
+
+#employee:nth-child(4) img{
+    background: #E59C7F;
+}
+
+#employee:nth-child(5) img{
+    background: #00c8ff70;
+}
+
 #employee span {
     margin-top: 20px;
 }
@@ -114,12 +134,13 @@ body {
 @media screen and (max-width: 700px)
 {
     #employee {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     #employee img {
+        background: white;
         border-radius: 0;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
     }
 }
