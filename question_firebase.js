@@ -8,6 +8,7 @@ var firebaseConfig = {
     appId: "1:538246854850:web:cac696058cf10bddb8e35b",
     measurementId: "G-5VNWXZQG04"
 };
+console.log('usaf')
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
@@ -23,7 +24,7 @@ function onSignIn (googleUser){
     firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshot){          
         if (snapshot.val() == null)
         {
-            firebase.database().ref('users/' + user_num + '/qstncnt').set(0)
+            firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
         }
     })
 }
