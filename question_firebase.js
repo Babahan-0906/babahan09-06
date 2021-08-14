@@ -12,9 +12,18 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-firebase.database().ref('users/' + 'user1/' + 'qstncnt').once('value', function(snapshot){          
-    if (snapshot.val() == null)
-    {
-        firebase.database().ref('users/' + 'user1/' + 'qstncnt').set(0)
-    }
-})
+function onSignIn (googleUser){
+    var profile = googleUser.getBasicProfile(), user_num;
+    firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
+        snapshot.forEach(function(data) {
+            user_num = data.key
+            console.log(data.key)
+        })
+    })
+    firebase.database().ref('users/' + user_num + 'qstncnt').once('value', function(snapshot){          
+        if (snapshot.val() == null)
+        {
+            firebase.database().ref('users/' + 'user1/' + 'qstncnt').set(0)
+        }
+    })
+}
