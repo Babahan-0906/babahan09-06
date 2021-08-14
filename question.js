@@ -1,6 +1,6 @@
 console.log('fuck')
 function onSignIn (googleUser){
-    consoole.log('herd')
+    console.log('herd')
     var profile = googleUser.getBasicProfile(), user_num;
     firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
         snapshot.forEach(function(data) {
