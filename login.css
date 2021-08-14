@@ -30,7 +30,7 @@ i {
     grid-column: 1 / 9; 
     display: flex;
     /* border-bottom: 1px solid grey; */
-    box-shadow: 0 2px 2px 0px gray;
+    box-shadow: 0 2px 4px -2px gray;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
@@ -81,7 +81,7 @@ i {
     grid-row: 2 / 7;
     grid-column: 1 / 9;
     background: #f8f8f8;
-    box-shadow: 0 2px 2px 0px gray;
+    box-shadow: 0 2px 4px -2px gray;
     padding: 50px;
 }
 
@@ -177,7 +177,7 @@ i {
 #footer {
     grid-row: 7 / 9;
     grid-column: 1 / 9;
-    box-shadow: 0 2px 2px 0px gray;
+    box-shadow: 0 2px 4px -2px gray;
 }
 
 @media screen and (max-width: 403px)
