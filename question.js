@@ -46,8 +46,8 @@ function onSignIn (googleUser){
             firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){          
                 if (snapshott.val() != null)
                 {
-                    firebase.database().ref('users/' + user_num + '/qstncnt').set(snapshot.val() + 1)
-                    firebase.database().ref('users/' + user_num + '/Question/' + (snapshot.val()) + '-question').set(chat_letter)
+                    firebase.database().ref('users/' + user_num + '/qstncnt').set(snapshott.val() + 1)
+                    firebase.database().ref('users/' + user_num + '/Question/' + (snapshott.val()) + '-question').set(chat_letter)
                 }
             })
         })
