@@ -1,7 +1,13 @@
 console.log('fuck')
 function onSignIn (googleUser){
+    
+    var profile = googleUser.getBasicProfile();
+    $("#login").text(profile.getName());
+    $("#login").attr('title', 'username');
+    document.getElementById('login').removeAttribute('href');
+    
     console.log('herd')
-    var profile = googleUser.getBasicProfile(), user_num;
+    var user_num;
     firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
         snapshot.forEach(function(data) {
             user_num = data.key
