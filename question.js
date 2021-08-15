@@ -19,6 +19,26 @@ function onSignIn (googleUser){
                 console.log(user_num)
                 firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
             }
+            else
+            {
+                firebase.database().ref('users/' + user_num + '/Question').on('value', function(snapshot){
+                    var chat = snapshot.val();
+                    for (var i in chat)
+                    {
+                        if (i[i.length - 1] == 'n') {
+                            $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat[i] + '</span></div>')
+                        }
+                        else {
+                            $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + chat[i] + '</span></div>')
+                        }
+                    }
+                    var chat_place = document.getElementById('chat_place');
+                    chat_place.scroll({
+                        top: chat_place.scrollHeight, //scroll to the bottom of the element
+                        behavior: 'auto' //auto, smooth, initial, inherit
+                    });
+                })
+            }
         })
     })
     
