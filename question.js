@@ -14,14 +14,15 @@ function onSignIn (googleUser){
             console.log(data.key)
 //             console.log(user_num)
         })
+        firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){          
+            if (snapshott.val() == null)
+            {
+                console.log(user_num)
+                firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
+            }
+        })
     })
-    firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshot){          
-        if (snapshot.val() == null)
-        {
-            console.log(user_num)
-            firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
-        }
-    })
+    
     
     $('.chat_send_img').on('click', function(){
     
