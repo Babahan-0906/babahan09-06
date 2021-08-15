@@ -1,4 +1,3 @@
-console.log('fuck')
 function onSignIn (googleUser){
     
     var profile = googleUser.getBasicProfile();
@@ -43,9 +42,11 @@ function onSignIn (googleUser){
                 user_num = data.key
                 console.log(data.key)
             })
-            firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){          
+            firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){
+                console.log(user_num)
                 if (snapshott.val() != null)
                 {
+                    console.log('girdim')
                     firebase.database().ref('users/' + user_num + '/qstncnt').set(snapshott.val() + 1)
                     firebase.database().ref('users/' + user_num + '/Question/' + (snapshott.val()) + '-question').set(chat_letter)
                 }
