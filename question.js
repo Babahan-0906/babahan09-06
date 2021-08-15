@@ -24,7 +24,9 @@ function onSignIn (googleUser){
     
     
     $('.chat_send_img').on('click', function(){
-    
+        
+        console.log(user_num)
+        
         var chat_letter = $('#chat_text').val(), profile = googleUser.getBasicProfile(), user_num;
         if (chat_letter != '')
         {
@@ -38,6 +40,8 @@ function onSignIn (googleUser){
             });
         }
         firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
+            console.log(user_num)
+            
             snapshot.forEach(function(data) {
                 user_num = data.key
                 console.log(data.key)
