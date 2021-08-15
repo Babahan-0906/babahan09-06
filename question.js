@@ -12,12 +12,13 @@ function onSignIn (googleUser){
         snapshot.forEach(function(data) {
             user_num = data.key
             console.log(data.key)
-            console.log(user_num)
+//             console.log(user_num)
         })
     })
     firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshot){          
         if (snapshot.val() == null)
         {
+            console.log(user_num)
             firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
         }
     })
