@@ -48,7 +48,7 @@ function onSignIn (googleUser){
         var chat_letter = $('#chat_text').val(), profile = googleUser.getBasicProfile(), user_num;
         if (chat_letter != '')
         {
-            $('#chat_place').append('<div id="chat_question" class="chat">' + chat_letter + '</div>')
+            $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat_letter + '</span></div>')
             $('#chat_text').val('')
             $('#chat_text').focus()
             var chat_place = document.getElementById('chat_place');
