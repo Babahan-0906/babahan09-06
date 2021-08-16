@@ -1,5 +1,5 @@
 function onSignIn (googleUser){
-    var first_timee = false;
+    var first_timee = false, chat_place = document.getElementById('chat_place');
     var profile = googleUser.getBasicProfile();
     $("#login").text(profile.getName());
     $("#login").attr('title', 'username');
@@ -34,7 +34,6 @@ function onSignIn (googleUser){
                             }
                         }
                         first_timee = true;
-                        var chat_place = document.getElementById('chat_place');
                         chat_place.scroll({
                             top: chat_place.scrollHeight, //scroll to the bottom of the element
                             behavior: 'auto' //auto, smooth, initial, inherit
@@ -66,7 +65,6 @@ function onSignIn (googleUser){
         if (chat_letter != ''  &&  first_timee == true)
         {
             $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat_letter + '</span></div>')
-            var chat_place = document.getElementById('chat_place');
             chat_place.scroll({
                 top: chat_place.scrollHeight,//scroll to the bottom of the element
                 behavior: 'smooth' //auto, smooth, initial, inherit
