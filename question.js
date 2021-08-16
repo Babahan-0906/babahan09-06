@@ -1,5 +1,5 @@
 function onSignIn (googleUser){
-    
+    var first_timee = false;
     var profile = googleUser.getBasicProfile();
     $("#login").text(profile.getName());
     $("#login").attr('title', 'username');
@@ -23,20 +23,35 @@ function onSignIn (googleUser){
             {
                 firebase.database().ref('users/' + user_num + '/Question').on('value', function(snapshot){
                     var chat = snapshot.val();
-                    for (var i in chat)
-                    {
-                        if (i[i.length - 1] == 'n') {
-                            $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat[i] + '</span></div>')
+                    if (first_timee == false) {
+                        for (var i in chat)
+                        {
+                            if (i[i.length - 1] == 'n') {
+                                $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat[i] + '</span></div>')
+                            }
+                            else {
+                                $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + chat[i] + '</span></div>')
+                            }
                         }
-                        else {
+                        first_timee = true;
+                        var chat_place = document.getElementById('chat_place');
+                        chat_place.scroll({
+                            top: chat_place.scrollHeight, //scroll to the bottom of the element
+                            behavior: 'auto' //auto, smooth, initial, inherit
+                        });
+                    }
+                    else {
+                        var i = Object.keys(chat)[Object.keys(chat).length - 1]
+                        console.log(i[i.length - 1]);
+                        if (i[i.length - 1] == 'r') {
+                            console.log('ondanam girdim mth');
                             $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + chat[i] + '</span></div>')
+                            chat_place.scroll({
+                                top: chat_place.scrollHeight, //scroll to the bottom of the element
+                                behavior: 'smooth' //auto, smooth, initial, inherit
+                            });
                         }
                     }
-                    var chat_place = document.getElementById('chat_place');
-                    chat_place.scroll({
-                        top: chat_place.scrollHeight, //scroll to the bottom of the element
-                        behavior: 'auto' //auto, smooth, initial, inherit
-                    });
                 })
             }
         })
@@ -46,11 +61,11 @@ function onSignIn (googleUser){
     $('.chat_send_img').on('click', function(){
         
         var chat_letter = $('#chat_text').val(), profile = googleUser.getBasicProfile(), user_num;
-        if (chat_letter != '')
+        $('#chat_text').val('');
+        $('#chat_text').focus();
+        if (chat_letter != ''  &&  first_timee == true)
         {
             $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat_letter + '</span></div>')
-            $('#chat_text').val('')
-            $('#chat_text').focus()
             var chat_place = document.getElementById('chat_place');
             chat_place.scroll({
                 top: chat_place.scrollHeight,//scroll to the bottom of the element
