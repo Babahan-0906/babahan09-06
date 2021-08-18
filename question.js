@@ -17,7 +17,7 @@ function onSignIn (googleUser){
             if (snapshott.val() == null)
             {
                 console.log(user_num)
-                firebase.database().ref('users/' + user_num + '/qstncnt').set(1)
+                firebase.database().ref('users/' + user_num + '/qstncnt').set('0' + 1)
             }
             else
             {
@@ -70,21 +70,33 @@ function onSignIn (googleUser){
                 behavior: 'smooth' //auto, smooth, initial, inherit
             });
         }
-        firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
-            snapshot.forEach(function(data) {
-                user_num = data.key
-                console.log(data.key)
+        if (chat_letter != '')
+        {
+            firebase.database().ref('users').orderByChild('Email').equalTo(profile.getEmail()).once("value", function(snapshot) {
+                snapshot.forEach(function(data) {
+                    user_num = data.key
+                    console.log(data.key)
+                })
+                firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){
+                    console.log(user_num)
+                    if (snapshott.val() != null)
+                    {
+                        if (snapshot.val()[1] == 9  ||  snapshot.val()[0] != 0)
+                        {
+                            console.log('girmeli emez yere girdim');
+                            firebase.database().ref('users/' + user_num + '/qstncnt').set(parseInt(snapshot.val()) + 1)
+                            firebase.database().ref('users/' + user_num + '/Question/' + snapshott.val() + '-question').set(chat_letter)
+                        }
+                        else
+                        {
+                            var count = parseInt(snapshot.val()) + 1
+                            firebase.database().ref('users/' + user_num + '/qstncnt').set('0' + count)
+                            firebase.database().ref('users/' + user_num + '/Question/' + snapshot.val() + '-question').set(chat_letter)
+                        }
+                    }
+                })
             })
-            firebase.database().ref('users/' + user_num + '/qstncnt').once('value', function(snapshott){
-                console.log(user_num)
-                if (snapshott.val() != null)
-                {
-                    console.log('girdim')
-                    firebase.database().ref('users/' + user_num + '/qstncnt').set(snapshott.val() + 1)
-                    firebase.database().ref('users/' + user_num + '/Question/' + (snapshott.val()) + '-question').set(chat_letter)
-                }
-            })
-        })
+        }
         
         
     })
