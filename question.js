@@ -1,3 +1,9 @@
+$('#chat_text').keypress(function(event) {
+    if (event.which == '13') {
+        event.preventDefault();
+    }
+})
+
 function onSignIn (googleUser){
     var first_timee = false, chat_place = document.getElementById('chat_place');
     var profile = googleUser.getBasicProfile();
@@ -56,6 +62,17 @@ function onSignIn (googleUser){
         })
     })
     
+    $('#chat_text').on('keydown', function(event) {
+        if ((event.ctrlKey || event.metaKey) && (event.keyCode == 13 || event.keyCode == 10)) {
+            // console.log("ctr + e");
+            // console.log(document.getElementById('chat_text').value);
+            document.getElementById('chat_text').value = document.getElementById('chat_text').value + '\n'
+        }
+        else if (event.key === 'Enter')
+        {
+            $('.chat_send_img').click()
+        }
+    })
     
     $('.chat_send_img').on('click', function(){
         
