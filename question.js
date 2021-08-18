@@ -81,17 +81,17 @@ function onSignIn (googleUser){
                     console.log(user_num)
                     if (snapshott.val() != null)
                     {
-                        if (snapshot.val()[1] == 9  ||  snapshot.val()[0] != 0)
+                        if (snapshott.val()[1] == 9  ||  snapshott.val()[0] != 0)
                         {
                             console.log('girmeli emez yere girdim');
-                            firebase.database().ref('users/' + user_num + '/qstncnt').set(parseInt(snapshot.val()) + 1)
+                            firebase.database().ref('users/' + user_num + '/qstncnt').set(parseInt(snapshott.val()) + 1)
                             firebase.database().ref('users/' + user_num + '/Question/' + snapshott.val() + '-question').set(chat_letter)
                         }
                         else
                         {
-                            var count = parseInt(snapshot.val()) + 1
+                            var count = parseInt(snapshott.val()) + 1
                             firebase.database().ref('users/' + user_num + '/qstncnt').set('0' + count)
-                            firebase.database().ref('users/' + user_num + '/Question/' + snapshot.val() + '-question').set(chat_letter)
+                            firebase.database().ref('users/' + user_num + '/Question/' + snapshott.val() + '-question').set(chat_letter)
                         }
                     }
                 })
