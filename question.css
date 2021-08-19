@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
-    max-height: 380px;
+    max-height: 389px;
     overflow: auto;
 }
 
@@ -170,7 +170,7 @@ body {
     padding: 30px;
     background: #f0f0f0;
     border-radius: 10px;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     /* display: flex; */
 
     grid-row: 6 / 7;
