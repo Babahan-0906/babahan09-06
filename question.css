@@ -148,6 +148,10 @@ body {
     text-align: left;
 }
 
+.chat span {
+    white-space: pre-line;
+}
+
 #chat_question {
     align-self: flex-end;
     background: #DBF4FD;
