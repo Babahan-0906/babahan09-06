@@ -150,6 +150,7 @@ body {
 
 .chat span {
     white-space: pre-line;
+    overflow-wrap: break-word;
 }
 
 #chat_question {
