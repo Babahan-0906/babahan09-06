@@ -126,7 +126,7 @@ body {
 }
 
 #chat_main {
-    box-shadow: 0 2px 2px -2px grey;
+/*     box-shadow: 0 2px 2px -2px grey; */
 
     grid-row: 2 / 6;
     grid-column: 2 / 8;
@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
-    max-height: 370px;
+    max-height: 380px;
     overflow: auto;
 }
 
@@ -206,10 +206,24 @@ body {
     grid-column: 1 / 9;
     box-shadow: 0 2px 4px -2px gray;
 }
-/* 
-@media screen and (max-width: 403px)
+
+@media screen and (max-width: 500px)
 {
-    #sign_button button {
-        width: 100%;
+    #main {
+        background: none;
+        box-shadow: none;
+        padding: 0;
     }
-} */
+
+    #wrapper {
+        border-radius: 0;
+    }
+
+    #chat_form {
+        padding: 5px;
+    }
+
+    #chat_header, #chat_main, #chat_footer {
+        grid-column: 1 / 9;
+    }
+}
