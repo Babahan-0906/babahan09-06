@@ -5,6 +5,10 @@ $('#chat_text').keypress(function(event) {
 })
 
 function onSignIn (googleUser){
+    function htmlEntities(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    
     var first_timee = false, chat_place = document.getElementById('chat_place');
     var profile = googleUser.getBasicProfile();
     $("#login").text(profile.getName());
@@ -33,10 +37,10 @@ function onSignIn (googleUser){
                         for (var i in chat)
                         {
                             if (i[i.length - 1] == 'n') {
-                                $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat[i] + '</span></div>')
+                                $('#chat_place').append('<div id="chat_question" class="chat"><span>' + htmlEntities(chat[i]) + '</span></div>')
                             }
                             else {
-                                $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + chat[i] + '</span></div>')
+                                $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + htmlEntities(chat[i]) + '</span></div>')
                             }
                         }
                         first_timee = true;
@@ -50,7 +54,7 @@ function onSignIn (googleUser){
                         console.log(i[i.length - 1]);
                         if (i[i.length - 1] == 'r') {
                             console.log('ondanam girdim mth');
-                            $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + chat[i] + '</span></div>')
+                            $('#chat_place').append('<div id="chat_answer" class="chat"><span>' + htmlEntities(chat[i]) + '</span></div>')
                             chat_place.scroll({
                                 top: chat_place.scrollHeight, //scroll to the bottom of the element
                                 behavior: 'smooth' //auto, smooth, initial, inherit
@@ -81,7 +85,7 @@ function onSignIn (googleUser){
         $('#chat_text').focus();
         if (chat_letter != ''  &&  first_timee == true)
         {
-            $('#chat_place').append('<div id="chat_question" class="chat"><span>' + chat_letter + '</span></div>')
+            $('#chat_place').append('<div id="chat_question" class="chat"><span>' + htmlEntities(chat_letter) + '</span></div>')
             chat_place.scroll({
                 top: chat_place.scrollHeight,//scroll to the bottom of the element
                 behavior: 'smooth' //auto, smooth, initial, inherit
