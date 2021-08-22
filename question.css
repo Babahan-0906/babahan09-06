@@ -110,7 +110,8 @@ body {
 
 #chat_header {
     /* background: rgba(39, 39, 39, 0.678); */
-    box-shadow: 0 2px 2px -2px grey;
+    /* box-shadow: 0 2px 2px -2px grey; */
+    border-bottom: 1px solid rgb(228, 228, 228);
     border-radius: 20px 20px 0 0;
 
     grid-row: 1 / 2;
