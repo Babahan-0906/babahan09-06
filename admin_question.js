@@ -43,9 +43,14 @@ function UserClick(user)
     first_timee = false;
     user_num = user.getAttribute('user_num')
     // document.getElementById('user_num').setAttribute('class', user_num);
+    if (window.innerWidth <= 500) {
+        console.log('dadadsdjhdfafdasfa hgsf agdajhjhfj ');
+        $('#chat_users').hide()
+        $('#chat_header, #chat_main, #chat_footer').show()
+    }
 
     console.log(users[user_num]);
-    $('#chat_admin img').attr('src', users[user_num]['Image'])
+    $('#chat_admin img:not(#chat_admin_back)').attr('src', users[user_num]['Image'])
     $('#chat_admin span').text(users[user_num]['Name'])
 
     console.log(user_num);
