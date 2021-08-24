@@ -162,6 +162,11 @@ img:not(#chat_send_img img) {
     padding-left: 15px;
 }
 
+#chat_admin_back {
+    cursor: pointer;
+    display: none;
+}
+
 #chat_main {
     /* box-shadow: 0 2px 2px -2px grey; */
 
@@ -257,15 +262,23 @@ img:not(#chat_send_img img) {
         border-radius: 0;
     }
 
-/*     #chat_users {
+    #chat_users {
+        grid-row: 1 / 7;
+        grid-column: 1 / 9;
+        border-radius: 20px;
+        border-right: none;
         display: none;
-    } */
+    }
+
+    #chat_admin_back {
+        display: block;
+    }
 
     #chat_form {
         padding: 5px;
     }
 
-/*     #chat_header, #chat_main, #chat_footer {
+    #chat_header, #chat_main, #chat_footer {
         grid-column: 1 / 9;
-    } */
+    }
 } 
