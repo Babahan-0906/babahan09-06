@@ -59,6 +59,7 @@
 
                     <div id="chat_header">
                         <div id="chat_admin">
+                            <img src="icons/back.png" id="chat_admin_back">
                             <img src="icons/logo.png" alt="" width="50px">
                             <span style="margin-left: 5px;">RozMebel</span>
                         </div>
@@ -96,6 +97,13 @@
     </div>
     <script src="jquery-3.4.0.js"></script>
     <script src="admin_question.js"></script>
+    <script>
+        $('#chat_admin_back').click(function(){
+            $('#chat_users').show()
+            $('#chat_header, #chat_main, #chat_footer').hide()
+        })
+        
+    </script>
 
 </body>
 </html>
