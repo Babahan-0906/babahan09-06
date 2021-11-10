@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icons/logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1078303304114-sdbn4hpos3h0rv7fkvs1uhqe59ovjk6k.apps.googleusercontent.com">
+    <!-- <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css"> -->
+    <!-- <link rel="stylesheet" href="fonts/material-design-iconic-font.css"> -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDTV_e1m19GlKg4sc5N7B0Wv5mAYO_o2UY",
+            authDomain: "rozmebel-fa6a5.firebaseapp.com",
+            databaseURL: "https://rozmebel-fa6a5-default-rtdb.firebaseio.com",
+            projectId: "rozmebel-fa6a5",
+            storageBucket: "rozmebel-fa6a5.appspot.com",
+            messagingSenderId: "538246854850",
+            appId: "1:538246854850:web:cac696058cf10bddb8e35b",
+            measurementId: "G-5VNWXZQG04"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <link rel="stylesheet" href="mebels.css">
+
+    <title>Baş sahypa</title>
+</head>
+<body>
+    <div id="section">
+        <div id="header">
+            <ul>
+                <li><a href="home.html" title="Home">Baş sahypa</a></li>
+                <li><a href="mebels.html" title="New furnitures">Soňky oňarylan mebeller</a></li>
+                <li><a href="employees.html" title="Employees">Işçiler</a></li>
+                <li><a href="question.html" title="Ask a question">Sorag sora</a></li>
+                <li><div class="g-signin2" data-onsuccess="onSignIn" data-width=auto style="display: none;">Sign in with </div></li>
+            </ul>
+            <ul>
+                <li><input type="search" title="Search" placeholder="Gözle..." id="search"></li>
+                <!-- <li><a href="register.html" title="Register">Agza bol</a></li> -->
+                <li><a href="login.html" title="Login">Içerik gir</a></li>
+            </ul>
+        </div>
+        
+        <div id="main">
+            <div id="wrapper">
+                <div class="mebel_form">
+                    <h2>Kuhnýa</h2>
+
+                    <div class="mebel_info">
+                        <div class="mebel_info_room_size">
+                            <span class="mebel_info_title">Komnat razmeri: </span> <span>940 x 940</span>
+                        </div>
+                        <div class="mebel_info_wasted_time">
+                            <span class="mebel_info_title">Oňarmak üçin sarp edilen wagty: </span> <span>17 gün</span>
+                        </div>
+                        <div class="mebel_info_cost">
+                            <span class="mebel_info_title">Bahasy: </span> <span>10000 TMT</span>
+                        </div>
+                        <div class="mebel_info_date">
+                            <span class="mebel_info_title">Oňarylan senesi: </span> <span>06.07.2021</span>
+                        </div>
+                        <div class="mebel_info_tags">
+                            <span class="mebel_info_title">Kategoriýalary: </span>
+                            <a href="#"> <span>Kuhnýa</span> </a>
+                            <a href="#"> <span>Spalny</span> </a>
+                            <a href="#"> <span>Naharhana</span> </a>
+                        </div>
+                    </div>
+
+                    <div class="mebel_pictures">
+                        <span class="mebel_info_title">Suratlary: </span>
+                        <div class="mebel_pictures_photo">
+                            <img src="images/home_bm1.jpg" alt="" srcset="">
+                            <img src="images/home_bm2.jpg" alt="" srcset="">
+                            <img src="images/home_bm3.jpg" alt="" srcset="">
+                        </div>
+
+                        <span class="mebel_info_title">Proýekti: </span>
+                        <div class="mebel_pictures_project">
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="mebel_form">
+                    <h2>Spalny</h2>
+                    <div class="mebel_info">
+                        <div class="mebel_info_room_size">
+                            <span class="mebel_info_title">Komnat razmeri: </span> <span>9400 x 94</span>
+                        </div>
+                        <div class="mebel_info_wasted_time">
+                            <span class="mebel_info_title">Oňarmak üçin sarp edilen wagty: </span> <span>23 gün</span>
+                        </div>
+                        <div class="mebel_info_cost">
+                            <span class="mebel_info_title">Bahasy: </span> <span>10500 TMT</span>
+                        </div>
+                        <div class="mebel_info_date">
+                            <span class="mebel_info_title">Oňarylan senesi: </span> <span>06.08.2021</span>
+                        </div>
+                        <div class="mebel_info_tags">
+                            <span class="mebel_info_title">Kategoriýalary: </span>
+                            <a href="#"> <span>Kuhnýa</span> </a>
+                            <a href="#"> <span>Spalny</span> </a>
+                            <a href="#"> <span>Naharhana</span> </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mebel_pictures">
+                        <span class="mebel_info_title">Suratlary: </span>
+                        <div class="mebel_pictures_photo">
+                            <img src="images/home_bm1.jpg" alt="" srcset="">
+                            <img src="images/home_bm2.jpg" alt="" srcset="">
+                            <img src="images/home_bm3.jpg" alt="" srcset="">
+                        </div>
+
+                        <span class="mebel_info_title">Proýekti: </span>
+                        <div class="mebel_pictures_project">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <script src="login.js" async defer></script>
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+                crossorigin="anonymous"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            </div>
+            <!-- <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/f7cba77138964e458ed46275972aa9448efedf1ce9994191817a2cab3c5e0d1a.js"></script> -->
+            <div id="footer">Footer</div>
+        </div>
+        <script src="jquery-3.4.0.js"></script>
+
+</body>
+</html>

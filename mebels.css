@@ -1,0 +1,168 @@
+body {
+    text-align: center;
+    background: white;
+    font-size: 1em;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+                sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+#section {
+    display: grid;
+    max-width: 2000;
+    margin: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, minmax(100px, auto));
+    grid-gap: 10px;
+    /* background: #009999; */
+}
+
+#section #header, #footer {
+    /* background: rgb(63, 63, 70); */
+    background: white;
+}
+
+/* i {
+    position: absolute;
+    margin-top: 5px;
+} */
+
+#header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 9; 
+    display: flex;
+    /* border-bottom: 1px solid grey; */
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /* background: white; nime uchin ishlegenyok*/
+}
+
+#header ul {
+    /* line-height: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#header ul li {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(39, 39, 39, 0.678);
+}
+
+#header ul li a {
+    color: rgba(39, 39, 39, 0.678);
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+    /* line-height: 50px; */
+}
+
+#header a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+#search {
+    margin: 10px;
+    padding: 10px;
+    font-size: large;
+    outline: none;
+    border: 2px solid #6dabe4;
+    border-radius: 25px;
+}
+
+
+#main {
+    grid-row: 2 / 8;
+    grid-column: 1 / 9;
+    background: #ffffff;
+    box-shadow: 0 2px 5px 0px rgb(223, 223, 223);
+    /* padding: 50px; */
+}
+
+#wrapper {
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 10px;
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 75px 0;
+    background: white;
+    box-shadow: 0px 15px 16.83px 0.17px rgb(0 0 0 / 5%); */
+    padding: 15px;
+}
+
+.mebel_form {
+    padding-bottom: 5px;
+    display: grid;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.mebel_form:last-child {
+    border-bottom: none;
+}
+
+/* .mebel_form h2 {
+    margin-top: -10px;
+} */
+
+.mebel_info {
+    padding: 20px;
+    text-align: start;
+}
+
+.mebel_info_title {
+    color: #666;
+    font-size: larger;
+    font-weight: 550;
+}
+
+.mebel_info_tags a {
+    color: #7daedd;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mebel_info_tags a:hover {
+    color: #3d90dd;
+    transition: 0.2s color;
+}
+
+.mebel_pictures {
+    /* max-height: 200px; */
+}
+
+.mebel_pictures img {
+    max-width: 33%;
+}
+
+#footer {
+    grid-row: 8 / 9;
+    grid-column: 1 / 9;
+    box-shadow: 0 2px 5px 0px rgb(223, 223, 223);
+}
+
+@media screen and (max-width: 939px)
+{
+    .mebel_pictures img {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 319px)
+{
+    .mebel_pictures img {
+        max-width: 100%;
+    }
+}
