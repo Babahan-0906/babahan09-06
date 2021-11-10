@@ -2,7 +2,8 @@ body {
     text-align: center;
     background: white;
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+                sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 #section {
@@ -30,7 +31,7 @@ body {
     grid-column: 1 / 9; 
     display: flex;
     /* border-bottom: 1px solid grey; */
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
@@ -81,7 +82,7 @@ body {
     grid-row: 2 / 8;
     grid-column: 1 / 9;
     background: #f8f8f8;
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
     padding: 50px;
 }
 
@@ -110,8 +111,7 @@ body {
 
 #chat_header {
     /* background: rgba(39, 39, 39, 0.678); */
-    /* box-shadow: 0 2px 2px -2px grey; */
-    border-bottom: 1px solid rgb(228, 228, 228);
+    box-shadow: 0 2px 2px -2px grey;
     border-radius: 20px 20px 0 0;
 
     grid-row: 1 / 2;
@@ -127,7 +127,7 @@ body {
 }
 
 #chat_main {
-/*     box-shadow: 0 2px 2px -2px grey; */
+    /* box-shadow: 0 2px 2px -2px grey; */
 
     grid-row: 2 / 6;
     grid-column: 2 / 8;
@@ -151,7 +151,7 @@ body {
 
 .chat span {
     white-space: pre-line;
-    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 #chat_question {
@@ -161,7 +161,6 @@ body {
 }
 
 #chat_answer {
-    align-self: flex-start;
     background: #F2F6F9;
     border-top-left-radius: 0;
 }
@@ -205,7 +204,7 @@ body {
 #footer {
     grid-row: 8 / 9;
     grid-column: 1 / 9;
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
 }
 
 @media screen and (max-width: 500px)
@@ -227,4 +226,4 @@ body {
     #chat_header, #chat_main, #chat_footer {
         grid-column: 1 / 9;
     }
-}
+} 
