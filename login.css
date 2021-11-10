@@ -2,7 +2,8 @@ body {
     text-align: center;
     background: white;
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",
+                sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 #section {
@@ -30,7 +31,7 @@ i {
     grid-column: 1 / 9; 
     display: flex;
     /* border-bottom: 1px solid grey; */
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
@@ -81,7 +82,7 @@ i {
     grid-row: 2 / 7;
     grid-column: 1 / 9;
     background: #f8f8f8;
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
     padding: 50px;
 }
 
@@ -146,11 +147,6 @@ i {
     flex-wrap: wrap;
 }
 
-#image {
-    border-radius: 50%;
-    margin-top: 10px;
-}
-
 #sign_button {
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +173,7 @@ i {
 #footer {
     grid-row: 7 / 9;
     grid-column: 1 / 9;
-    box-shadow: 0 2px 4px -2px gray;
+    box-shadow: 0 2px 5px -1px rgb(223, 223, 223);
 }
 
 @media screen and (max-width: 403px)
