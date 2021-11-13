@@ -137,7 +137,7 @@ body {
 }
 
 img:not(#chat_send_img img) {
-    width: 50px;
+    width: 30px;
     border-radius: 50%;
 }
 
