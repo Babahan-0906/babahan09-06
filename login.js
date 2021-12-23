@@ -47,7 +47,7 @@ function redirectBack () {
     {
         href = link.substring (link.indexOf('=') + 1, link.length);
         // window.location.href = 'https://babahan-0906.github.io/babahan09-06/' + href;
-        window.location.href = "http://127.0.0.1:5500/" + href;
+        window.location.href = "https://babahan-0906.github.io/babahan09-06/" + href;
     }
     else
     {
