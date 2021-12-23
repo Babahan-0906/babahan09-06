@@ -40,3 +40,19 @@ function signOut() {
         $("#email").attr('value', "");
     });
 }
+
+function redirectBack () {
+    var link = window.location.href, href;
+    if (link.indexOf('=') != -1)
+    {
+        href = link.substring (link.indexOf('=') + 1, link.length);
+        // window.location.href = 'https://babahan-0906.github.io/babahan09-06/' + href;
+        window.location.href = "http://127.0.0.1:5500/" + href;
+    }
+    else
+    {
+        // href = "file:///C:/Downloads/New Project/home.html";
+        href = "https://babahan-0906.github.io/babahan09-06/home.html";
+        window.location.href = href;
+    }
+}
