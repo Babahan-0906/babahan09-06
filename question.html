@@ -39,8 +39,11 @@
                 <div id="chat_form">
                     <div id="chat_header">
                         <div id="chat_admin">
-                            <img src="icons/logo.png" alt="" width="50px">
-                            <span style="margin-left: 5px;">RozMebel</span>
+                            <div style="display: flex; align-items: center;">
+                                <img src="icons/logo.png" alt="" width="50px">
+                                <span style="margin-left: 5px;">RozMebel</span>
+                            </div>
+                            <div class="chat_zoom">Zoom</div>
                         </div>
                     </div>
                     <div id="chat_main">
@@ -76,5 +79,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script src="jquery-3.4.0.js"></script>
+    <script>
+        var clicked = 0, a = innerHeight / 6 - 5;
+        $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(' + a + 'px, auto))');
+        $('#wrapper').css('min-height', innerHeight + 'px');
+        // why this isnt working: 'repeat(6, minmax(' + innerHeight / 6 - 5 + 'px, auto))'
+
+        $('.chat_zoom').click (function() {
+            if (clicked == 0)
+            {
+                $('#wrapper').css('position', 'fixed');
+                $('#wrapper').css('top', '0');
+                $('#wrapper').css('left', '0');
+                clicked = 1;
+            }
+            else    $('#wrapper').css('position', 'inherit'), clicked = 0;
+        })
+    </script>
 </body>
 </html>
