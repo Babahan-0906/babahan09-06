@@ -1,0 +1,27 @@
+img:not(.iz_img) {
+    cursor: zoom-in;
+}
+
+img:not(.iz_img):hover {
+    opacity: 75%;
+    transition: 0.4s;
+}
+
+.img_zoom {
+    top: 0;
+    left: 0;
+
+    position: fixed;
+    background: rgba(0, 0, 0, 0.815);
+    /* opacity: 75%; */
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+    z-index: 2;
+}
+
+.img_zoom img {
+    opacity: 100%;
+    margin: auto;
+    cursor: zoom-out;
+}
