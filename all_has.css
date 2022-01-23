@@ -10,7 +10,7 @@ img:not(.iz_img):hover {
 .img_zoom {
     top: 0;
     left: 0;
-
+    display: none;
     position: fixed;
     background: rgba(0, 0, 0, 0.815);
     /* opacity: 75%; */
