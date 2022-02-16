@@ -16,51 +16,51 @@
     <script src="login_firebase.js"></script>
 <!--     1078303304114-sdbn4hpos3h0rv7fkvs1uhqe59ovjk6k.apps.googleusercontent.com -->
 
-    <title>Baş sahypa</title>
+    <title>Login</title>
 </head>
 <body>
     <div id="section">
         <div id="header">
             <ul>
-                <li><a href="home.html" title="Home">Baş sahypa</a></li>
-                <li><a href="mebels.html" title="New furnitures">Soňky oňarylan mebeller</a></li>
+                <li><a href="home.html" title="Home">Home</a></li>
+                <li><a href="mebels.html" title="New furnitures">New furnitures</a></li>
                 <li><a href="employees.html" title="Employees">Işçiler</a></li>
-                <li><a href="question.html" title="Ask a question">Sorag sora</a></li>
+                <li><a href="question.html" title="Ask a question">Ask a question</a></li>
             </ul>
             <ul>
-                <li><input type="search" title="Search" placeholder="Gözle..." id="search"></li>
-                <!-- <li><a href="register.html" title="Register">Agza bol</a></li> -->
-                <li><a href="login.html" id="login" title="Login">Içerik gir</a></li>
+                <li><input type="search" title="Search" placeholder="Search..." id="search"></li>
+                <!-- <li><a href="register.html" title="Register">Register</a></li> -->
+                <li><a href="login.html" id="login" title="Login">Login</a></li>
             </ul>
         </div>
         
         <div id="main">
             <div id="wrapper">
                 <div id="signin_form">
-                    <h2>Içerik gir</h2>
+                    <h2>Login</h2>
                     <div id="form-group">
                         <i class="zmdi zmdi-account material-icons-name"></i>
-                        <input type="text" id="username" name="name" placeholder="Ulanyjy Ady" disabled>
+                        <input type="text" id="username" name="name" placeholder="Username" disabled>
                     </div>
                     
                     <div id="form-group">
                         <i class="zmdi zmdi-email"></i>
-                        <input type="text" id="email" name="email" placeholder="Ulanyjy Email-y" disabled>
+                        <input type="text" id="email" name="email" placeholder="User's Email" disabled>
                         <div class="g-signin2" data-onsuccess="onSignIn" data-width=auto>Sign in with </div>
                         <div id="user_photo" style="display: none;">
                             <div>
-                                Ulanyjy Surady:
+                                Users's Photo:
                                 <img id="image">
                             </div>
                         </div>
                         <div id="sign_button">
-                            <button type="button" class="sign_out" onclick="signOut();" style="display: none; margin-right: 2px;">Çyk</button>
-                            <button class="sign_in" style="display: none;" onclick="redirectBack();">Içerik gir</button>
+                            <button type="button" class="sign_out" onclick="signOut();" style="display: none; margin-right: 2px;">Log Out</button>
+                            <button class="sign_in" style="display: none;" onclick="redirectBack();">Log in</button>
                         </div>
                     </div>
                 </div>
                 <div id="signin_image">
-                    <img src="images/signin-image.jpg" alt="Içerik-gir-surat">
+                    <img src="images/signin-image.jpg" alt="Login-picture">
                 </div>
             </div>
             <script src="login.js" async defer></script>
