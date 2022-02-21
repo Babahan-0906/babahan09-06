@@ -80,9 +80,14 @@
     
     <script src="jquery-3.4.0.js"></script>
     <script>
+        function chatFromSize (a)
+        {
+            $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(' + a + 'px, auto))');
+            $('#wrapper').css('min-height', innerHeight + 'px');
+        }
+
         var clicked = 0, a = innerHeight / 6 - 5;
-        $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(' + a + 'px, auto))');
-        $('#wrapper').css('min-height', innerHeight + 'px');
+        chatFromSize (a);
         // why this isnt working: 'repeat(6, minmax(' + innerHeight / 6 - 5 + 'px, auto))'
 
         $('.chat_zoom').click (function() {
@@ -92,8 +97,16 @@
                 $('#wrapper').css('top', '0');
                 $('#wrapper').css('left', '0');
                 clicked = 1;
+                a = innerHeight / 6 - 5;
+                chatFromSize (a);
             }
-            else    $('#wrapper').css('position', 'inherit'), clicked = 0;
+            else
+            {
+                $('#wrapper').css('position', 'inherit');
+                clicked = 0;
+                a = innerHeight / 6 - 5;
+                chatFromSize (a);
+            }
         })
     </script>
 </body>
