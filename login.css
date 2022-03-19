@@ -147,6 +147,10 @@ i {
     flex-wrap: wrap;
 }
 
+#user_photo div img {
+    border-radius: 50%;
+}
+
 #sign_button {
     display: flex;
     flex-wrap: wrap;
