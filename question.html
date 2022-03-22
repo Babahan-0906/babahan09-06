@@ -45,14 +45,13 @@
                                 <img src="icons/logo.png" alt="" width="50px">
                                 <span style="margin-left: 5px;">RozMebel</span>
                             </div>
-                            <span style="transform: scale(1.5); cursor: pointer;" class="iconify chat_zoom icon_z1" data-icon="zmdi:fullscreen" title="Fit to Screen"></span>
-                            <span style="transform: scale(1.5); cursor: pointer;" class="iconify chat_zoom icon_z2" data-icon="zmdi:fullscreen-exit" title="Fit to Screen"></span>
+                            <i style="transform: scale(2); cursor: pointer;" class="chat_zoom zmdi zmdi-fullscreen" title="Fit to Screen"></i>
                         </div>
                     </div>
                     <div id="chat_main">
                         <div id="chat_place">
                             <div id="chat_answer" class="chat">
-                                <span>Hi, how are you?You can ask your questions here, we will answer you as fast as we can!
+                                <span>Hi, how are you? You can ask your questions here, we will answer you as fast as we can!
                                 </span>
                             </div>
                         </div>
@@ -91,7 +90,6 @@
         // why this isnt working: 'repeat(6, minmax(' + innerHeight / 6 - 5 + 'px, auto))'
 
         var clicked = 0, a;
-        $('.icon_z2').hide();
 
         $('.chat_zoom').click (function() {
             if (clicked == 0)
@@ -105,9 +103,7 @@
 
                 a = innerHeight / 6 - 5;
                 $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(' + a + 'px, auto))');
-                
-                $('.icon_z1').hide();
-                $('.icon_z2').show();
+                $('.chat_zoom').toggleClass('zmdi-fullscreen zmdi-fullscreen-exit');
 
                 clicked = 1;
             }
@@ -117,8 +113,7 @@
                 $('#wrapper').css('max-width', '1200px');
 
                 $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(100px, auto))');
-                $('.icon_z2').hide();
-                $('.icon_z1').show();
+                $('.chat_zoom').toggleClass('zmdi-fullscreen zmdi-fullscreen-exit');
 
                 clicked = 0;
             }
