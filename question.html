@@ -45,7 +45,7 @@
                                 <img src="icons/logo.png" alt="" width="50px">
                                 <span style="margin-left: 5px;">RozMebel</span>
                             </div>
-                            <i style="transform: scale(2); cursor: pointer;" class="chat_zoom zmdi zmdi-fullscreen" title="Fit to Screen"></i>
+                            <i style="transform: scale(2); cursor: pointer; margin-left: 3px;" class="chat_zoom zmdi zmdi-fullscreen" title="Fit to Screen"></i>
                         </div>
                     </div>
                     <div id="chat_main">
@@ -116,6 +116,14 @@
                 $('.chat_zoom').toggleClass('zmdi-fullscreen zmdi-fullscreen-exit');
 
                 clicked = 0;
+            }
+        })
+        
+        $('#chat_text').click(function() {
+            if (clicked == 1)
+            {
+                a = innerHeight / 6 - 5;
+                $('#chat_form').css('grid-template-rows', 'repeat(6, minmax(' + a + 'px, auto))');
             }
         })
     </script>
