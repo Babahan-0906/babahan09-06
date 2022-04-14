@@ -165,6 +165,7 @@ body {
 }
 
 #chat_answer {
+    align-self: flex-start;
     background: #F2F6F9;
     border-top-left-radius: 0;
 }
